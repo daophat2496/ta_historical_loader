@@ -1,0 +1,12 @@
+from argparse import ArgumentParser
+import os
+import sys
+
+def ParseArgs() :
+	argsDict = {}
+	if "BOOTSTRAP_SERVER" in os.environ :
+		argsDict["bootstrap_server"] = os.getenv["BOOTSTRAP_SERVER"]
+	else :
+		argsDict["bootstrap_server"] = sys.argv[0]
+
+	if "
